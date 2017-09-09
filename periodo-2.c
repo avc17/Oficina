@@ -16,7 +16,7 @@ long i, cont = 0, aux;
 	
 	
 	aux = lcrandom();
-	//insere 1 nos indices sortiados e para assim que encontrar um indice que contenha 1
+	//insere 1 nos indices sorteados e para assim que encontrar um indice que contenha 1
 	while (v[aux] == '0')
 	{
 		v[aux] = '1';

@@ -15,7 +15,8 @@ int eh_letra (int c)
 	   (c <= 227)) || (c == 231) ||
 	   ((c >= 233) && (c <= 234)) || 
 	   (c == 237) || ((c >= 243) && 
-	   (c <= 245)) || (c == 250))
+	   (c <= 245)) || (c == 250) || 
+	   (c == 252) || (c == 220))
 		return 1;
 	return 0;
 
@@ -31,6 +32,22 @@ int i;
 	if (pertence(palavra, dic) != NULL )
 		return 1;
 		
+ 	if (((palavra[i] >= 'A') && (palavra[i] <= 'Z')) || ((palavra[i] >= 192) && (palavra[i] <= 218))) 
+		str[i] = palavra[i];
+	else
+		str[i] = palavra[i] + 32;
+
+	for (i = 1; i <= tam; i++)
+	{
+    
+ 		 if (((palavra[i] >= 'A') && (palavra[i] <= 'Z')) || ((palavra[i] >= 192) && (palavra[i] <= 218))) 
+			    str[i] = palavra[i] + 32;
+		 else
+			    str[i] = palavra[i];
+	}  
+	if (pertence(str,dic) != NULL)
+		return 1;
+                 		
 	for (i = 0; i <= tam; i++)
 	{
     
